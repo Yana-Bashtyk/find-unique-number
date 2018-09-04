@@ -1,0 +1,27 @@
+function findUniq(arr) {
+  
+  for (var i=0; i<arr.length; i++)
+  {
+    var n = arr[i];
+    var found = arr[i+1];
+    var foundNext = arr[i+2];
+    if (n!=found)
+    {
+      if (n==foundNext)
+      {
+        return found;
+      }
+      else 
+      {
+        return n;
+      }
+    }
+    else
+    {
+      if (n!=foundNext)
+      {
+        return foundNext;
+      }
+    }
+  }
+}
